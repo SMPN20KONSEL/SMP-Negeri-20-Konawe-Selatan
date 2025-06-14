@@ -95,7 +95,6 @@
     .fa-instagram { color: #e4405f; }
     .fa-youtube { color: #ff0000; }
     .fa-whatsapp { color: #4e08e4; }
-
 .slider::before {
   content: "";
   display: block;
@@ -104,7 +103,6 @@
   margin-bottom: 20px;
   border-radius: 5px;
 }
-
 .slider {
   position: relative;
   width: 90vw;
@@ -117,13 +115,11 @@
   border: 5px solid #ffffff;
   background: linear-gradient(to bottom right, #f0f0f0, #ddd);
 }
-
 .slides {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .slide {
   position: absolute;
   width: 100%;
@@ -134,13 +130,11 @@
   transition: opacity 1s ease-in-out;
   border-radius: 10px;
 }
-
 .slide:nth-child(1) { animation-delay: 0s; }
 .slide:nth-child(2) { animation-delay: 2.4s; }
 .slide:nth-child(3) { animation-delay: 4.8s; }
 .slide:nth-child(4) { animation-delay: 7.2s; }
 .slide:nth-child(5) { animation-delay: 9.6s; }
-
 @keyframes fade {
   0%   { opacity: 0; }
   10%  { opacity: 1; }
@@ -148,47 +142,39 @@
   40%  { opacity: 0; }
   100% { opacity: 0; }
 }
-
 .section-divider {
   border-top: 4px solid #555; /* dari 2px → 4px dan warna lebih gelap */
   margin: 40px auto;
   width: 90%;
 }
-
 .intro-sambutan {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
 .sambutan-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .foto-kepsek {
   width: 180px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .sambutan-text {
   flex: 1;
   text-align: justify;
 }
-
 .sambutan-text h2 {
   margin-top: 0;
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
-
 .sambutan-text p {
   margin-bottom: 1rem;
 }
-
 .intro-profil {
   max-width: 800px;
   margin: 2rem auto; /* Jarak atas dan bawah */
@@ -220,26 +206,22 @@
   flex-direction: column;
   align-items: center;
 }
-
 .icon-text {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 5px;
 }
-
 .icon-text p {
   margin: 0;
   font-weight: bold;
   font-size: 16px;
 }
-
 .counter-box span {
   font-size: 20px;
   font-weight: bold;
   margin-top: 5px;
 }
-
     footer {
       background-color: #06c406;
       color: white;
@@ -266,6 +248,7 @@
       text-decoration: none;
       margin: 5px 0;
     }
+    
     .footer-icons a {
       margin-right: 10px;
     }
@@ -308,8 +291,6 @@
   </style>
 </head>
 <body>
-
-
 <header>
   <div class="top-bar" style="display:flex;justify-content:space-between;align-items:center;padding:5px 20px;font-size:14px;background-color:#eee;color:rgb(0, 0, 0);">
     <div><i class="fas fa-phone"></i> - &nbsp;&nbsp; <i class="fas fa-envelope"></i> smpn20konsel96@gmail.com</div>
@@ -341,7 +322,6 @@
     </div>
   </nav>
 </header>
-
 <div class="slider">
   <div class="slides">
     <img src="image/Kegiatan 1.jpg" class="slide" alt="Kegiatan 1" />
@@ -423,18 +403,14 @@
     </div>
   </div>
 </footer>
-
 <div class="bottom-bar" style="background-color:#f7df09;text-align:center;padding:10px;font-size:14px;">
-  © 2025 SMPN 20 Konawe Selatan <span style="color:red">❤</span> Email: smpn20konsel96@gmail.cm
+  © 2025 SMPN 20 Konawe Selatan <span style="color:red">❤</span> Email: smpn20konsel96@gmail.com
 </div>
-
-
 <script>
   // Toggle menu saat nav-toggle diklik
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
-
     if (toggle && navLinks) {
       toggle.addEventListener("click", function () {
         navLinks.classList.toggle("active");
@@ -443,5 +419,4 @@
   });
 </script>
 </body>
-
 </html>
