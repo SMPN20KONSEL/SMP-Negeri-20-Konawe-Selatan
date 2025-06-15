@@ -18,26 +18,34 @@
           <a href="https://wa.me/qr/AXZTONE55Z4YK1"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
-  <nav>
-<div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-  &#9776;
-</div>
-    <div class="logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="image/Logo_transparent.png" alt="Logo" style="width:50px; background-color:white;">
-      <h2 style="margin:0; font-size:20px; color:white;">SMPN20KONSEL<br><small style="font-size:12px; font-weight:normal; color:white;"> Tempat menimba ilmu, tumbuh berprestasi dengan hati yang teguh dan bersatu.</small>
-      </h2>
-    </div>
-    <div class="nav-links" style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
-      <a href="index.html" style="color:white;text-decoration:none;">Home</a>
-      <a href="profil.html" style="color:white;text-decoration:none;">Profil</a>
-      <a href="kesiswaan.html" style="color:white;text-decoration:none;">Kesiswaan</a>
-      <a href="informasi.html" style="color:white;text-decoration:none;">Informasi</a>
-      <a href="galeri.html" style="color:white;text-decoration:none;">Galeri</a>
-      <a href="kontak.html" style="color:white;text-decoration:none;">Kontak</a>
-      <a class="login-btn" href="daftar_spmb.html" style="background-color:orange;color:white;padding:5px 15px;border-radius:20px;text-decoration:none;">Daftar SPMB <i class="fas fa-arrow-right"></i></a>
-    </div>
-  </nav>
+<nav>
+  <!-- Tombol garis tiga -->
+  <div class="nav-toggle">&#9776;</div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="image/Logo_transparent.png" alt="Logo" style="width:50px; background-color:white;">
+    <h2 style="margin:0; font-size:20px; color:white;">
+      SMPN20KONSEL<br>
+      <small style="font-size:12px; font-weight:normal; color:white;">
+        Tempat menimba ilmu, tumbuh berprestasi dengan hati yang teguh dan bersatu.
+      </small>
+    </h2>
+  </div>
+
+  <!-- Menu -->
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="profil.html">Profil</a>
+    <a href="kesiswaan.html">Kesiswaan</a>
+    <a href="informasi.html">Informasi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+    <a class="login-btn" href="daftar_spmb.html">Daftar SPMB <i class="fas fa-arrow-right"></i></a>
+  </div>
+</nav>
 </header>
+  
 <style>
   /* Gaya Umum */
 body {
@@ -234,9 +242,36 @@ caption {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  section {
-    padding: 20px;
+ .nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #f5cd05;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
   }
 
   h2 {
@@ -516,6 +551,16 @@ caption {
 <div class="bottom-bar" style="background-color:#f7df09;text-align:center;padding:10px;font-size:14px;">
   © 2025 SMPN 20 Konawe Selatan <span style="color:red">❤</span> Email: smpn20konsel96@gmail.cm
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
 
 </body>
 </html>
