@@ -202,16 +202,13 @@ footer .column {
     width: 100%;
     background-color: #f5cd05;
   }
-  .nav-links.show {
+  .nav-links.active {
     display: flex;
   }
   .nav-toggle {
     display: block;
   }
 }
-
-
-
 /* Tambahan: Responsivitas */
 @media (max-width: 768px) {
   .nav-toggle {
