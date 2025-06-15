@@ -274,20 +274,32 @@
       border: 0;
       border-radius: 10px;
     }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #f5cd05;
-      }
-      .nav-links.show {
-        display: flex;
-      }
-      .nav-toggle {
-        display: block;
-      }
-    }
+/* Tambahan untuk menu mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f5cd05;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+/* Untuk tampilan desktop */
+.nav-toggle {
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -303,14 +315,15 @@
     </div>
   </div>
   <nav>
-<div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-  &#9776;
-</div> 
-    <div class="logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="image/Logo_transparent.png" alt="Logo" style="width:50px; background-color:white;">
-      <h2 style="margin:0; font-size:20px; color:white;">SMPN20KONSEL<br><small style="font-size:12px; font-weight:normal; color:white;"> Tempat menimba ilmu, tumbuh berprestasi dengan hati yang teguh dan bersatu.</small>
-      </h2>
-    </div>
+  <!-- Tombol garis tiga -->
+  <div class="nav-toggle">&#9776;</div>
+ <div class="logo">
+    <img src="image/Logo_transparent.png" alt="Logo" style="width:50px; background-color:white;">
+    <h2 style="margin:0; font-size:20px; color:white;">
+      SMPN20KONSEL<br>
+      <small style="font-size:12px; font-weight:normal; color:white;">Tempat menimba ilmu, tumbuh berprestasi dengan hati yang teguh dan bersatu.</small>
+    </h2>
+  </div>
     <div class="nav-links" style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
       <a href="index.html" style="color:white;text-decoration:none;">Home</a>
       <a href="profil.html" style="color:white;text-decoration:none;">Profil</a>
@@ -407,15 +420,13 @@
   © 2025 SMPN 20 Konawe Selatan <span style="color:red">❤</span> Email: smpn20konsel96@gmail.com
 </div>
 <script>
-  // Toggle menu saat nav-toggle diklik
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
-    if (toggle && navLinks) {
-      toggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-      });
-    }
+
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
   });
 </script>
 </body>
