@@ -300,6 +300,37 @@
 .nav-toggle {
   display: none;
 }
+     .nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #f5cd05;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  }
   </style>
 </head>
 <body>
